@@ -1,0 +1,32 @@
+{
+  "name": "ilovepokemon",
+  "version": "1.0.0",
+  "description": "Pokemon Fan Site",
+  "main": "index.js",
+  "scripts": {
+  	"dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dullabop/iLovePokemon.git"
+  },
+  "keywords": [
+    "fan",
+    "site",
+    "pomeon",
+    "great",
+    "pancake"
+  ],
+  "author": "Dulla Bop",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dullabop/iLovePokemon/issues"
+  },
+  "homepage": "https://github.com/dullabop/iLovePokemon#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
