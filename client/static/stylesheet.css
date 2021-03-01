@@ -1,0 +1,46 @@
+body {
+	background-color: coral;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+h1 {
+	text-align: center;
+}
+
+#navbar{
+background-color: aquamarine;
+position: absolute;
+top: 2px;
+right: 16px;
+}
+
+#mainpanel{
+	position: absolute;
+	top: 20px;
+	right: 20%;
+	left: 20%;
+}
+
+#navigationbar{
+	position: absolute;
+	top: 1%;
+	right: 1%;
+}
+
+#navigationbar > li {
+	list-style-type: none;
+	background-color: cyan;
+	border-width: 1px;
+	padding: 3px;
+}
+
+#navigationbar > li > a {
+	color: #AA99DD;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#navigationbar > li >a:hover {
+	color: #AAEEDD;	
+}
