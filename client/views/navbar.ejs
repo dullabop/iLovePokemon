@@ -1,8 +1,41 @@
 <div id="navbar">
-	<ul id="navigationbar">
-        	<li><a href="index.html">The Club Hub</a></li>
-        	<li><a href="Favorites.html">Fan Favorites</a></li>
-        	<li><a href="bestcards.html">Best Cards</a></li>
-        	<li><a href="invest.html">PokeVestments</a></li>
-    	</ul>
+    	<a href="/">Home</a> &diam;
+    	<a href="/Favorites">Favorite Pokemon</a> &diam;
+    	<span id="navwelcome"></span>
 </div>
+
+
+<script>
+
+
+$(function() {
+	var name = <%=data.username %>;
+	var greetNewcomer= "<input type="text" /><button type="submit"> Tell me your name</button>
+
+	const sayYourName = function(){
+			var visitorName = $('#navwelcome > input').val();
+			$.ajax({
+				type: 'post',
+				url: 'welcome',
+				data: {
+					'nombre': visitorName
+				}
+				success: (data) => {
+					if(data=='SUCCESS') $('#navwelcome').html("Welcome, "+visitorName+"!")
+				}
+			});
+	}
+
+	if(name=="") {
+		$('#navwelcome.html(greetNewcomer)
+		$('#navwelcome > button').on('click', sayYourName);
+		$('#navwelcome > input').on('keyup',  (key) => {
+			if(key.keyCode==13) sayYourName() ;
+		});
+	}
+	else{
+		$('#navwelcome.html("Welcome, "+name+"!")
+	}
+});
+
+</script
