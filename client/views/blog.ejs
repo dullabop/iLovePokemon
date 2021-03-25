@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title> All About Pokemon</title>
+    <%- include ('header.ejs') %>
+</head>
+
+<body>
+
+<div id="mainpanel">
+<h1> So You Really Like Pokemon...</h1>
+
+<table>
+<% postset.forEach(function(bpost) { %>
+<% include('blogpostpreview', {post: bpost}) %>    
+<% }) %>
+</table>
+<br></br>    
+<a href="write/">Write a post</a>
+</div>
+<%- include ('navbar.ejs') %>
+
+</body>
+
+
+</html>
