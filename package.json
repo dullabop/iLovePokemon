@@ -1,11 +1,18 @@
 {
   "name": "ilovepokemon",
   "version": "1.0.0",
-  "description": "Pokemon Fan Site",
+  "description": "Pokemon fan site",
   "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.11.19",
+    "nodemon": "^2.0.7"
+  },
   "scripts": {
-    "dev": "nodemon server/index.js",
-    "start": "node server/index.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,20 +22,14 @@
   "keywords": [
     "fan",
     "site",
-    "pomeon",
-    "great",
-    "pancake"
+    "pokemon",
+    "amazin",
+    "ash"
   ],
-  "author": "Dulla Bop",
+  "author": "Abdullah Collins",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/dullabop/iLovePokemon/issues"
   },
-  "homepage": "https://github.com/dullabop/iLovePokemon#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "mongoose": "4.4.4",
-    "nodemon": "^2.0.7"
-  }
+  "homepage": "https://github.com/dullabop/iLovePokemon#readme"
 }

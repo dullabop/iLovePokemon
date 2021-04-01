@@ -5,13 +5,13 @@ const { response } = require('express');
 const bodyParser = require('body-parser');
 const session = require ('express-session')
 const mongoose = require('mongoose');
-const {BlogPost} = require('./models.js')
+const {BlogPost} = require('./server/models.js')
 
 //Navigation
 
 const clientPath = path.join(__dirname,'../client/')
 const staticPath = path.join(clientPath,'/static/');
-const viewsPath = path.join(clientPath,'/views/')
+const viewPath = path.join(clientPath,'/views/')
 
 //Basic Server
 
