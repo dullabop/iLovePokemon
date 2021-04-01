@@ -1,18 +1,16 @@
 <html>
-<head>
-    <title><%=entry.title></title>
-    <%- include ('header.ejs') %>
-</head>
-
-<body>
-
-<h1><%=entry.title%></h1>
-
-<%=entry.body%>
-
-<%- include ('navbar.ejs') %>
-
-</body>
-
-
+    <h1>
+        <title>%=entry.title%</title>
+        <%- include('header.ejs') %>
+    </h1>
+    <body>
+        <%- include ('navbar.ejs')%>
+        <div id="content"><!-- Place a few sentences of something goofy here.-->
+            <h2>%=entry.title%</h2>
+            <h3>%=entry.body%</h3>
+            
+        <br/><br/>
+        (<a href="edit">Edit</a>|<a href="delete">Delete</a>)
+        </div> <!-- end content -->
+    </body>
 </html>
