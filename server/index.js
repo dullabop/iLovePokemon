@@ -115,7 +115,22 @@ app.get ('/blog/:id/edit', (req, res)=>{
 			else if (!result) res.redirect('/blog/')
 			res.render('writing', {data: req.session, draft: result})
 		})
-	})
+})
+
+app.post ('/blog/:id/edit', (req, res)=>{
+    BlogPost.findById(req.params.id, (error, result)=>{
+        if(error){
+            console.log(error);
+            res.status(500);
+        } else if (result) {
+            result.title = req.body.title;
+            result.body = req.body.body;
+            result.save();
+            res.redirect(path.join('/blog/', req.params.id));
+        }
+        else res.redirect('/blog/');
+    })
+})
 
 app.put('/blog/update', (req, res)=>{
 		console.log(req)
