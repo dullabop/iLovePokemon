@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Who are You?</title>
+    <%- include('header.ejs') %>
+</head>
+
+<body>
+    <%- include('navbar.ejs') %>
+    <div id="content">
+    <h1 align="center">Who are You?</h1>
+    <br /><br />
+
+<form method="post" action="/register">
+    <table align="center">
+    <tr></tr>
+    <td>Name: </td>
+    <td><input type="text" name="username" id="username" /></td>
+    <td>Password: </td>
+    <td><input type="password" name="password" id="password" /></td>
+ <td>Confirm password: </td>
+  <td><input type="password" id="confirmpassword" /></td>
+        <td>Favourite Pokemon: </td>
+        <select name="favourite">
+             <option value="red">Fire Pokemon</option>
+            <option value="blue">Water Pokemon</option>
+            <option value="green">Grass Pokemon</option>
+            <option value="purple">Psychic Pokemon</option>
+            <option value="black">Dark Pokemon</option>
+            <option value="white">Fiary Pokemon</option>
+            <option value="orange">Legendary Pokemon</option>
+        </select>
+        <td colspan="2">
+        <button type="submit" id="register" disabled>Register</button>
+        </table>
+        </form>
+        </div>
+
+        <script>
+            $(() => {
+                $('input').on('keyup', () => {
+                if ($('#password').val() == $('#confirmpassword').val()
+                && $('#username').val() != ""
+                && $('#password').val() != "") {
+                console.log($('#username').val());
+                $('#register').prop('disabled', false);
+                 }
+                else {
+                $('#register').prop('disabled', true);
+                }
+            })
+            });
+        </script>
+</body>
+</htmL>

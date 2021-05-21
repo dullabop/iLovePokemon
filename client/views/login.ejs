@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title> Welcome Friend</title>
+    <%- include('header.ejs') %>
+</head>
+
+<body>
+
+    <div id="mainpanel" style="text-align: center;"
+
+        <h1> Welcome back Pokemon Master</h1><br/><br/>
+
+        <form action= "login" method="POST"
+        <h3><i>Name:</i><input type="text" placeholder= "Enter Username" name="username" /></h3>
+        <h3><i>Password:</i><input type="password" placeholder= "Enter Password" name="password" /></h3>
+            <br/><button type="submit">Log in</button>
+        </form>
+
+        <br/><br/>
+        <a href="/register">I am new here!</a>
+
+    </div>
+
+    <%- include('navbar.ejs') %>
+
+</body>
+</html>
