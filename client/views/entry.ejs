@@ -1,16 +1,46 @@
 <html>
-    <h1>
+    <head>
         <title>%=entry.title%</title>
         <%- include('header.ejs') %>
-    </h1>
+    </head>
+   
     <body>
-        <%- include ('navbar.ejs')%>
-        <div id="content"><!-- Place a few sentences of something goofy here.-->
-            <h2>%=entry.title%</h2>
-            <h3>%=entry.body%</h3>
+        
+        <div id="mainpanel">
+            
+            <h1>%=entry.title%</h1>
+            <i>by <%=entry.author%></i><br/><br/>
+                <%- entry.parsedText%>
             
         <br/><br/>
-        (<a href="edit">Edit</a>|<a href="delete">Delete</a>)
-        </div> <!-- end content -->
+        (<a href="edit">Edit</a> | <a href="delete">Delete</a>)
+        <br/><br/>
+            <hr style="border:1pc solid black" />
+
+            <i style="font-size:0.8em">comments</i><br/><br/>
+
+
+            <% entry.comments.forEach(function(comment) { %>
+            <div><%= comment.text %></div>
+            <i><%= comment.author %></i>
+            <% if(data.isPokemonLover) { %>
+            <form action="deletecomment/<%=comment._id%>" method="post"><button type="submit">Delete</button></form>
+            <%}%>
+            <br/><br/>
+            <% }); %>
+                
+
+            <br/><br>
+        <a href="#" onclick="$('#commentform').show()"><i style="font-size: 0.8em">leave a comment would ya?></i></a><br/><br/>
+
+        <form action="comment" method="POST" id="commentform" style="display: none;">
+            <textarea style="width: 80%"></textarea><br/>
+            <button type="submit">Write Comment bby</button>
+        </form>
+        </div> 
+
+        <%- include ('navbar.ejs')%>
+
+
     </body>
 </html>

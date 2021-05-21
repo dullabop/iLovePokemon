@@ -5,7 +5,7 @@
     </h1>
     <body>
         <%- include ('navbar.ejs')%>
-        <div id="content"><!-- Place a few sentences of something goofy here.-->
+        <div id="content">
             <h2>Form Stuffs</h2>
             <% if(draft._id) { %>
                 <form action="/blog/<%=draft._id%>/edit" method="POST">

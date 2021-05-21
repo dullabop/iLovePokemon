@@ -2,7 +2,7 @@
     	<a href="/">Home</a> &diam;
     	<a href="/Favorites">Favorite Pokemon</a> &diam;
 		<a href="/blog/">Blog</a> &diam;
-    	<span id="navwelcome"></span>
+    	<span id="navwelcome">Hello, <a href="/login">stranger</a></span>
 </div>
 
 <script>
@@ -17,7 +17,7 @@ $(function() {
 	const sayYourName = function(){
 		var visitorName = $('#navwelcome > input').val();
             $.ajax({
-                url: 'welcome',
+                url: '/welcome',
                 type: 'POST',
                 data: {
                     'nombre': visitorName

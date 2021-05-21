@@ -1,3 +1,3 @@
 # iLovePokemon by DullaBop
 
-#I dont know what I am doing
+#I kinda know what im doing now 
